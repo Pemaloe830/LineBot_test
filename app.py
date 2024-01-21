@@ -27,5 +27,5 @@ if __name__ == "__main__":
   load_dotenv()
   token = os.getenv("NOTIFY_TOKEN")
   period_minute = os.getenv("DETECT_PERIOD_MINUTE")
-  thread = threading.Thread(target=detect, args=(token, period_minute))
+  thread = threading.Thread(target=detect, args=(token, int(period_minute)))
   thread.start()
